@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Minha música favorita</string>
+    <string name="lyrics">\n Please, please forgive me \n But I won\'t be home again \n Maybe someday you\'ll look up \n And, barely conscious, \n you\'ll say to no one: \n \'Isn\'t something missing?\' \n \n You won\'t cry for my absence I know, \n you forgot me long ago \n Am I that unimportant? \n Am I so insignificant? \n Isn\'t something missing? \n Isn\'t someone missing me?</string>
+    <string name="title_detalhe">Detalhes da banda</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_button">VER DETALHES</string>
+    <string name="title_music">Missing</string>
+    <string name="nome_band">Evanescence</string>
+    <string name="description">Evanescence é uma banda americana de metal alternativo formada em 1995 na cidade de Little Rock, Arkansas pela vocalista e pianista Amy Lee e o guitarrista Ben Moody. Atualmente o grupo possui cinco integrantes, porém Moody não está mais envolvido.</string>
+    <string name="lista_de_albuns">Lista de álbuns</string>
+</resources>
