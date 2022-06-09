@@ -1,24 +1,21 @@
-package br.com.zup.minhamusicafavorita.detalhes
+package br.com.zup.minhamusicafavorita.detalhesbanda
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings.Global.getString
-import android.provider.Settings.Secure.getString
-import android.provider.Settings.System.getString
 import android.view.MenuItem
 import br.com.zup.minhamusicafavorita.R
-import br.com.zup.minhamusicafavorita.databinding.ActivityDetalheBinding
-import br.com.zup.minhamusicafavorita.detalhes.adapter.DetalhePagerAdapter
+import br.com.zup.minhamusicafavorita.databinding.ActivityDetalhesBandaBinding
+import br.com.zup.minhamusicafavorita.detalhesbanda.adapter.DetalhePagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
-class DetalheActivity : AppCompatActivity() {
+class DetalhesBandaActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityDetalheBinding
+    private lateinit var binding : ActivityDetalhesBandaBinding
     private val listaTitulos = listOf("Informações", "Fotos")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetalheBinding.inflate(layoutInflater)
+        binding = ActivityDetalhesBandaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         exibirAppBarCustomizada()

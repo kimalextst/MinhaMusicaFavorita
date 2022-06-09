@@ -1,11 +1,11 @@
-package br.com.zup.minhamusicafavorita.detalhes.adapter
+package br.com.zup.minhamusicafavorita.detalhesbanda.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import br.com.zup.minhamusicafavorita.detalhes.fotos.FotosFragment
-import br.com.zup.minhamusicafavorita.detalhes.informacoes.InfoFragment
+import br.com.zup.minhamusicafavorita.detalhesbanda.fotos.FotosFragment
+import br.com.zup.minhamusicafavorita.detalhesbanda.informacoes.InfoFragment
 
 
 class DetalhePagerAdapter (

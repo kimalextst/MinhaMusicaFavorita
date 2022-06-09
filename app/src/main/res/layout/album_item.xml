@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvItemLista"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_8">
+
+        <ImageView
+            android:id="@+id/ivAlbum"
+            android:layout_width="@dimen/lengh_150dp"
+            android:layout_height="@dimen/lengh_150dp"
+            android:layout_margin="@dimen/margin_8"
+            android:scaleType="centerCrop"
+            android:src="@drawable/album_1_fallen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.cardview.widget.CardView>

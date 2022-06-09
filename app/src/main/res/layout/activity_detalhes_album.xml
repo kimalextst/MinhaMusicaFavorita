@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".detalhesbanda.informacoes.InfoFragment">
+    tools:context=".detalhesalbum.DetalhesAlbumActivity">
 
     <ImageView
-        android:id="@+id/ivEvanescence1"
+        android:id="@+id/ivAlbumCover"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:src="@drawable/evanescence_imagem_2"
@@ -17,27 +17,47 @@
         tools:layout_editor_absoluteY="2dp" />
 
     <TextView
-        android:id="@+id/tvNameBand"
+        android:id="@+id/tvAlbumTittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="@string/nome_band"
         android:textSize="@dimen/text_16"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivEvanescence1" />
+        app:layout_constraintTop_toBottomOf="@+id/ivAlbumCover" />
 
     <TextView
-        android:id="@+id/tvDescription"
+        android:id="@+id/tvAlbumDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:paddingLeft="@dimen/margin_24"
         android:paddingRight="@dimen/margin_24"
         android:text="@string/description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNameBand" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbumTittle" />
+
+    <TextView
+        android:id="@+id/tvArtistaLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32"
+        android:layout_marginStart="@dimen/margin_16"
+        android:text="Artista:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbumDescription"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor generico"
+        android:layout_marginStart="@dimen/margin_8"
+        app:layout_constraintStart_toEndOf="@id/tvArtistaLbl"
+        app:layout_constraintTop_toTopOf="@+id/tvArtistaLbl"
+        app:layout_constraintBottom_toBottomOf="@id/tvArtistaLbl"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

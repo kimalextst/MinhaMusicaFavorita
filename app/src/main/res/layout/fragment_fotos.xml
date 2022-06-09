@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".detalhes.fotos.FotosFragment">
+    tools:context=".detalhesbanda.fotos.FotosFragment">
 
     <TextView
         android:id="@+id/tvNameBand"
@@ -17,5 +17,17 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAlbum"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameBand"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:itemCount="7"
+        tools:listitem="@layout/album_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

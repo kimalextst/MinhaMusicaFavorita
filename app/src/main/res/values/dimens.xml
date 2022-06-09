@@ -5,6 +5,7 @@
     <dimen name="margin_24">24dp</dimen>
     <dimen name="margin_32">32dp</dimen>
     <dimen name="margin_64">64dp</dimen>
+    <dimen name="lengh_150dp">150dp</dimen>
     <dimen name="text_8">8sp</dimen>
     <dimen name="text_10">10sp</dimen>
     <dimen name="text_12">12sp</dimen>
