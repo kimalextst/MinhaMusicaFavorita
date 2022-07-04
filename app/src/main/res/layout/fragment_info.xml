@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".detalhesbanda.informacoes.InfoFragment">
+    tools:context=".detalhesbanda.informacoes.view.InfoFragment">
 
     <ImageView
         android:id="@+id/ivEvanescence1"

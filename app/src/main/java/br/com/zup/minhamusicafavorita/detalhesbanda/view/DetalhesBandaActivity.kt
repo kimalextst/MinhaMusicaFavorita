@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.detalhesbanda
+package br.com.zup.minhamusicafavorita.detalhesbanda.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

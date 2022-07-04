@@ -26,9 +26,9 @@ class AlbumAdapter (
 
     override fun getItemCount(): Int = listaAlbuns.size
 
-    fun atualizarListaAlbum(novaLista: MutableList<Album>) {
+    fun atualizarListaAlbum(novaLista: List<Album>) {
         if (listaAlbuns.size == 0) {
-            listaAlbuns = novaLista
+            listaAlbuns = novaLista.toMutableList()
         } else {
             listaAlbuns.addAll(novaLista)
         }

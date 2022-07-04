@@ -1,16 +1,21 @@
-package br.com.zup.minhamusicafavorita.detalhesalbum
+package br.com.zup.minhamusicafavorita.detalhesalbum.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import br.com.zup.minhamusicafavorita.ALBUM_KEY
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityDetalhesAlbumBinding
+import br.com.zup.minhamusicafavorita.detalhesalbum.viewmodel.DetalhesAlbumViewModel
 import br.com.zup.minhamusicafavorita.model.Album
 
 class DetalhesAlbumActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetalhesAlbumBinding
+
+    private val viewModel : DetalhesAlbumViewModel by lazy {
+        ViewModelProvider(this)[DetalhesAlbumViewModel::class.java]
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +23,7 @@ class DetalhesAlbumActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         exibirAppBarCustomizada()
+        observable()
         recuperarAlbum()
     }
 
@@ -29,17 +35,15 @@ class DetalhesAlbumActivity : AppCompatActivity() {
     private fun recuperarAlbum(){
         val album = intent.getParcelableExtra<Album>(ALBUM_KEY)
 
-        if (album != null){
-            exibirInformacoes(album)
-            Toast.makeText(this,"Tá funfando: ${album.getNome()}", Toast.LENGTH_LONG).show()
-        }
+        album?.let { viewModel.loadAlbum(it)}
     }
 
-    private fun exibirInformacoes(album: Album){
-        binding.ivAlbumCover.setImageResource(album.getImage())
-        binding.tvAlbumTittle.text = album.getNome()
-        binding.tvAlbumDescription.text = album.getDetalhe()
-
+    private fun observable() {
+        viewModel.response.observe(this) {
+            binding.ivAlbumCover.setImageResource(it.getImage())
+            binding.tvAlbumTittle.text = it.getNome()
+            binding.tvAlbumDescription.text = it.getDetalhe()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
